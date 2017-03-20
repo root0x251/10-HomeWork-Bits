@@ -20,7 +20,46 @@
 
 #pragma mark - lvl 1
 //    У каждого рандомно установите предметы
-    NSMutableArray *arrayDevTaskOne = [NSMutableArray new];
+//    NSMutableArray *arrayDevTaskOne = [NSMutableArray new];
+//    for (int i = 0; i < 10; i++) {
+//        Student *stud = [Student new];
+//        NSInteger learning = 0;
+//        for (int j = 0; j < 10; j++) {
+//            learning = learning | (arc4random() % 2 << j);
+//        }
+//        stud.study = learning;
+//        [arrayDevTaskOne addObject:stud];
+//        NSLog(@"%@", stud);
+//    }
+#pragma mark - lvl 2
+////    разделите их уже на два массива - технари и гуманитарии
+//    NSMutableArray *arrayTechnician = [NSMutableArray new];     // технарь
+//    NSMutableArray *arrayHumanities = [NSMutableArray new];     // гуманитарий
+//    NSMutableArray *arrayAverage = [NSMutableArray new];        // общеобразовательный
+//    for (Student *string in arrayDevTaskOne) {
+//        if ((string.study & StudentSubjectTypeMath) && (string.study & StudentSubjectTypePhysics)){
+//            [arrayTechnician addObject:string];
+//        } else if ((string.study & StudentSubjectTypeGeology) || (string.study & StudentSubjectTypeHistory)) {
+//            [arrayHumanities addObject:string];
+//        } else {
+//            [arrayAverage addObject:string];
+//        }
+//    }
+//    NSLog(@"++++++++++++++++++Technician++++++++++++++++++");
+//    for (Student *std in arrayTechnician) {
+//        NSLog(@"%@", std);
+//    }
+//    NSLog(@"++++++++++++++++++Humanities++++++++++++++++++");
+//    for (Student *std in arrayHumanities) {
+//        NSLog(@"%@", std);
+//    }
+//    NSLog(@"++++++++++++++++++Average++++++++++++++++++");
+//    for (Student *std in arrayAverage) {
+//        NSLog(@"%@", std);
+//    }
+#pragma mark - lvl 3
+//    Если студенты выбрали биологию, то отмените ее у них и выведите сообщение в лог, предмет отменен
+    NSMutableArray *arrayDevTaskThree = [NSMutableArray new];
     for (int i = 0; i < 10; i++) {
         Student *stud = [Student new];
         NSInteger learning = 0;
@@ -28,36 +67,16 @@
             learning = learning | (arc4random() % 2 << j);
         }
         stud.study = learning;
-        [arrayDevTaskOne addObject:stud];
-        NSLog(@"%@", stud);
+        [arrayDevTaskThree addObject:stud];
     }
-#pragma mark - lvl 2
-//    разделите их уже на два массива - технари и гуманитарии
-    NSMutableArray *arrayTechnician = [NSMutableArray new];     // технарь
-    NSMutableArray *arrayHumanities = [NSMutableArray new];     // гуманитарий
-    NSMutableArray *arrayAverage = [NSMutableArray new];        // общеобразовательный
-    for (Student *string in arrayDevTaskOne) {
-        if ((string.study & StudentSubjectTypeMath) && (string.study & StudentSubjectTypePhysics)){
-            [arrayTechnician addObject:string];
-        } else if ((string.study & StudentSubjectTypeGeology) || (string.study & StudentSubjectTypeHistory)) {
-            [arrayHumanities addObject:string];
-        } else {
-            [arrayAverage addObject:string];
+    for (Student *student in arrayDevTaskThree) {
+        if (student.study & StudentSubjectTypeBotany) {
+            NSLog(@"%@", student);
+            student.study = student.study & ~StudentSubjectTypeBotany;
+            NSLog(@"canceeeel");
+            NSLog(@"%@", student);
         }
     }
-    NSLog(@"++++++++++++++++++Technician++++++++++++++++++");
-    for (Student *std in arrayTechnician) {
-        NSLog(@"%@", std);
-    }
-    NSLog(@"++++++++++++++++++Humanities++++++++++++++++++");
-    for (Student *std in arrayHumanities) {
-        NSLog(@"%@", std);
-    }
-    NSLog(@"++++++++++++++++++Average++++++++++++++++++");
-    for (Student *std in arrayAverage) {
-        NSLog(@"%@", std);
-    }
-
     
     
     return YES;
