@@ -15,6 +15,7 @@
 		F9AAE4381E7EDE6800A249AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9AAE4361E7EDE6800A249AF /* LaunchScreen.storyboard */; };
 		F9AAE4431E7EDE6900A249AF /* _0_HomeWork_BitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AAE4421E7EDE6900A249AF /* _0_HomeWork_BitsTests.m */; };
 		F9AAE44E1E7EDE6900A249AF /* _0_HomeWork_BitsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AAE44D1E7EDE6900A249AF /* _0_HomeWork_BitsUITests.m */; };
+		F9B79F9C1E80427700A53FE5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B79F9B1E80427700A53FE5 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		F9AAE4491E7EDE6900A249AF /* 10-HomeWork-BitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "10-HomeWork-BitsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9AAE44D1E7EDE6900A249AF /* _0_HomeWork_BitsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0_HomeWork_BitsUITests.m; sourceTree = "<group>"; };
 		F9AAE44F1E7EDE6900A249AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B79F9A1E80427700A53FE5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
+		F9B79F9B1E80427700A53FE5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				F9AAE42B1E7EDE6800A249AF /* AppDelegate.h */,
 				F9AAE42C1E7EDE6800A249AF /* AppDelegate.m */,
+				F9B79F9A1E80427700A53FE5 /* Student.h */,
+				F9B79F9B1E80427700A53FE5 /* Student.m */,
 				F9AAE42E1E7EDE6800A249AF /* ViewController.h */,
 				F9AAE42F1E7EDE6800A249AF /* ViewController.m */,
 				F9AAE4311E7EDE6800A249AF /* Main.storyboard */,
@@ -276,6 +281,7 @@
 				F9AAE4301E7EDE6800A249AF /* ViewController.m in Sources */,
 				F9AAE42D1E7EDE6800A249AF /* AppDelegate.m in Sources */,
 				F9AAE42A1E7EDE6800A249AF /* main.m in Sources */,
+				F9B79F9C1E80427700A53FE5 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +513,7 @@
 				F9AAE4541E7EDE6900A249AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9AAE4551E7EDE6900A249AF /* Build configuration list for PBXNativeTarget "10-HomeWork-BitsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +522,7 @@
 				F9AAE4571E7EDE6900A249AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9AAE4581E7EDE6900A249AF /* Build configuration list for PBXNativeTarget "10-HomeWork-BitsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +531,7 @@
 				F9AAE45A1E7EDE6900A249AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

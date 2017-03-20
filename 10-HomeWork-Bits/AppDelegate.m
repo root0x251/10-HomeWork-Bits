@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Student.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+#pragma mark - lvl 1
+//    У каждого рандомно установите предметы
+    NSMutableArray *arrayDevTaskOne = [NSMutableArray new];
+    for (int i = 0; i < 10; i++) {
+        Student *stud = [Student new];
+        NSInteger learning = 0;
+        for (int j = 0; j < 10; j++) {
+            learning = learning | (arc4random() % 2 << j);
+        }
+        stud.study = learning;
+        [arrayDevTaskOne addObject:stud];
+        NSLog(@"%@", stud);
+    }
+#pragma mark - lvl 2
+//    разделите их уже на два массива - технари и гуманитарии
+    NSMutableArray *arrayTechnician = [NSMutableArray new];     // технарь
+    NSMutableArray *arrayHumanities = [NSMutableArray new];     // гуманитарий
+    NSMutableArray *arrayAverage = [NSMutableArray new];        // общеобразовательный
+    for (Student *string in arrayDevTaskOne) {
+        if ((string.study & StudentSubjectTypeMath) && (string.study & StudentSubjectTypePhysics)){
+            [arrayTechnician addObject:string];
+        } else if ((string.study & StudentSubjectTypeGeology) || (string.study & StudentSubjectTypeHistory)) {
+            [arrayHumanities addObject:string];
+        } else {
+            [arrayAverage addObject:string];
+        }
+    }
+    NSLog(@"++++++++++++++++++Technician++++++++++++++++++");
+    for (Student *std in arrayTechnician) {
+        NSLog(@"%@", std);
+    }
+    NSLog(@"++++++++++++++++++Humanities++++++++++++++++++");
+    for (Student *std in arrayHumanities) {
+        NSLog(@"%@", std);
+    }
+    NSLog(@"++++++++++++++++++Average++++++++++++++++++");
+    for (Student *std in arrayAverage) {
+        NSLog(@"%@", std);
+    }
+
+    
+    
     return YES;
 }
 
